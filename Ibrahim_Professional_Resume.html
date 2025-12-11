@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Abdulkarim - Software Engineer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header h2 {
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.6em;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .job-date {
+            color: #666;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .company-link {
+            color: #764ba2;
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+
+        .company-link:hover {
+            text-decoration: underline;
+        }
+
+        .job ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .job li {
+            margin-bottom: 8px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .project-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .project-subtitle {
+            color: #764ba2;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .achievement {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 3px solid #764ba2;
+        }
+
+        .achievement-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .achievement-detail {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .skill-category li:before {
+            content: "▹ ";
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-title {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .education-detail {
+            color: #667eea;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .education-date {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .certification {
+            background: #f9f9f9;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #764ba2;
+        }
+
+        .certification-title {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .certification-org {
+            color: #667eea;
+            font-size: 0.95em;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .header {
+                background: #667eea;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .job-header {
+                flex-direction: column;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                padding: 25px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ibrahim Abdulkarim</h1>
+            <h2>Senior Software Engineer | Full-Stack Developer | Blockchain Specialist</h2>
+            <div class="contact-info">
+                <a href="mailto:ibrahimabdulkarim193@gmail.com" style="font-size: 0.9em;">📧 ibrahimabdulkarim193@gmail.com</a>
+                <a href="https://www.linkedin.com/in/ibrahim193/" style="font-size: 0.85em;">🔗 linkedin.com/in/ibrahim193</a>
+                <a href="https://www.github.com/aliveevie" style="font-size: 0.85em;">🔗 github.com/aliveevie</a>
+                <a href="https://www.twitter.com/iabdulkarim_eth" style="font-size: 0.85em;">🔗 twitter.com/iabdulkarim_eth</a>
+                <a href="https://t.me/ibrahim_193" style="font-size: 0.85em;">💬 t.me/ibrahim_193</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Professional Summary -->
+            <div class="section">
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="summary">
+                    Versatile Software Engineer with <strong>comprehensive experience</strong> in full-stack development, blockchain technology, and software architecture. Proven ability to build anything from AI-powered applications to sophisticated blockchain platforms, with expertise spanning the entire software development lifecycle. Demonstrated leadership in managing software departments, training development teams, and delivering high-quality solutions for diverse clients. Expert in rapidly adapting to new technologies and frameworks, with a track record of award-winning projects that have reached millions of users. Strong foundation in software engineering principles, complemented by formal education and industry-recognized certifications.
+                </p>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="section">
+                <h3 class="section-title">Professional Experience</h3>
+
+                <!-- Head of Software Department -->
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Head of Software Department</div>
+                            <div class="company">Galaxy Information Technology and Telecommunications</div>
+                            <a href="https://www.galaxyitt.com.ng" target="_blank" class="company-link">www.galaxyitt.com.ng</a>
+                        </div>
+                        <div class="job-date">April 2025 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Lead and oversee the software department, managing full software development lifecycle from requirements gathering to deployment and maintenance</li>
+                        <li>Architect and develop custom software applications aligned with client business objectives, ensuring scalability and performance</li>
+                        <li>Implement quality assurance frameworks and best practices, maintaining high code quality standards across all projects</li>
+                        <li>Collaborate directly with MD/CEO on strategic technology initiatives and enterprise-level decision making</li>
+                        <li>Mentor and train upcoming developers and students, developing comprehensive training programs for software engineering fundamentals</li>
+                        <li>Establish and maintain development workflows, coding standards, and documentation practices</li>
+                        <li>Manage client relationships and technical consultations, translating business requirements into technical solutions</li>
+                    </ul>
+                </div>
+
+                <!-- Full-Stack Developer -->
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Full-Stack Developer</div>
+                            <div class="company">Galaxy Information Technology and Telecommunications</div>
+                            <a href="https://www.galaxyitt.com.ng" target="_blank" class="company-link">www.galaxyitt.com.ng</a>
+                        </div>
+                        <div class="job-date">April 2024 - April 2025</div>
+                    </div>
+                    <ul>
+                        <li>Designed and developed robust full-stack applications using modern frameworks and technologies (React, Node.js, TypeScript)</li>
+                        <li>Maintained and enhanced existing applications, implementing new features and optimizing performance</li>
+                        <li>Collaborated with clients to understand requirements and deliver tailored software solutions</li>
+                        <li>Implemented responsive front-end interfaces and scalable back-end architectures</li>
+                        <li>Conducted code reviews and contributed to team knowledge sharing initiatives</li>
+                        <li>Utilized version control systems (Git) and agile methodologies for efficient project delivery</li>
+                    </ul>
+                </div>
+
+                <!-- MLH Global Hack Week -->
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Global Hack Week Participant</div>
+                            <div class="company">Major League Hacking (MLH)</div>
+                        </div>
+                        <div class="job-date">2022 - 2024</div>
+                    </div>
+                    <ul>
+                        <li>Actively participated in multiple Global Hack Week events including AI Week, Data Week, and Beginners Week</li>
+                        <li>Developed innovative projects leveraging artificial intelligence, machine learning, and data science technologies</li>
+                        <li>Collaborated with global developer community on cutting-edge technology challenges and solutions</li>
+                        <li>Gained hands-on experience with emerging technologies through workshops, challenges, and hackathon projects</li>
+                        <li>Built and deployed functional applications during intensive week-long coding sprints</li>
+                        <li>Engaged with industry mentors and technical experts to enhance development skills</li>
+                    </ul>
+                </div>
+
+                <!-- Gold Fellow -->
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Gold Fellow (Software Developer)</div>
+                            <div class="company">The Room</div>
+                        </div>
+                        <div class="job-date">February 2023 - March 2024</div>
+                    </div>
+                    <ul>
+                        <li>Selected as Gold Fellow in competitive software development program</li>
+                        <li>Participated in collaborative team discussions and agile development sprints</li>
+                        <li>Contributed to multiple software projects through collaborative development and code maintenance</li>
+                        <li>Engaged in peer programming sessions and technical knowledge exchange</li>
+                        <li>Maintained production applications and implemented feature enhancements</li>
+                    </ul>
+                </div>
+
+                <!-- Web Developer -->
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Web Developer</div>
+                            <div class="company">Youth and Civil Society Coalition for Development</div>
+                        </div>
+                        <div class="job-date">January 2021 - January 2022</div>
+                    </div>
+                    <ul>
+                        <li>Developed and maintained organization website, ensuring optimal performance and user experience</li>
+                        <li>Implemented content management systems for easy updates and maintenance</li>
+                        <li>Collaborated with stakeholders to align website functionality with organizational goals</li>
+                        <li>Ensured web accessibility standards and mobile responsiveness</li>
+                        <li>Provided technical support and training to non-technical staff members</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Key Projects -->
+            <div class="section">
+                <h3 class="section-title">Notable Projects</h3>
+
+                <div class="project">
+                    <div class="project-title">Festify - Cross-Chain Greeting Platform</div>
+                    <div class="project-subtitle">On-Chain Festival Greetings System | <a href="https://festify.club" target="_blank" class="project-link">festify.club</a></div>
+                    <ul>
+                        <li>Developed sophisticated cross-chain greeting card NFT platform deployed across multiple blockchains (Celo, Optimism, Base, Avalanche)</li>
+                        <li>Architected and implemented smart contracts for seamless multi-chain interoperability</li>
+                        <li>Built responsive React frontend with TypeScript, integrating Web3 wallet connections and blockchain transactions</li>
+                        <li>Achieved significant user adoption with 100,000+ transactions processed across multiple networks</li>
+                        <li><strong>Won Avalanche Track at Chainlink Chromion Hackathon</strong></li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">ArbiLearn - Web3 Education Platform</div>
+                    <div class="project-subtitle">Learn-to-Earn Educational Platform | <a href="https://arbilearn.club" target="_blank" class="project-link">arbilearn.club</a></div>
+                    <ul>
+                        <li>Created innovative learn-and-earn initiative that rewards users for completing educational content</li>
+                        <li>Developed full-stack application with Node.js backend and React frontend</li>
+                        <li>Integrated blockchain technology to enable transparent, automated reward distribution</li>
+                        <li>Designed user-friendly interface making Web3 education accessible to global learners</li>
+                        <li>Reached millions of users, democratizing access to quality blockchain education</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="section">
+                <h3 class="section-title">Achievements & Recognition</h3>
+
+                <div class="achievement">
+                    <div class="achievement-title">🏆 Chainlink Chromion Hackathon Winner - Avalanche Track</div>
+                    <div class="achievement-detail">
+                        Won the prestigious Avalanche track with Festify project, recognized by Chainlink for innovation in cross-chain development
+                        (<a href="https://blog.chain.link/announcing-the-chainlink-chromion-hackathon-winners/" target="_blank" class="project-link">Official Announcement</a>)
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-title">🎓 BuidlGuidl Top Cohort Graduate - Batch 13</div>
+                    <div class="achievement-detail">
+                        Recognized as top graduate in competitive monthly builder cohort program, demonstrating excellence in blockchain development
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-title">💻 Open Source Contributions - Hacktoberfest 2023</div>
+                    <div class="achievement-detail">
+                        Successfully contributed to multiple open-source projects during Hacktoberfest 2023, supporting community development initiatives
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <div class="achievement-title">🌟 Multiple Hackathon Victories</div>
+                    <div class="achievement-detail">
+                        Winner of Encode Club Autonomous Apes Hackathon (Gaia bounty) and Encode Club HyperHack Hackathon (Hyperion testnet - Metis ecosystem)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="section">
+                <h3 class="section-title">Technical Skills & Expertise</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <ul>
+                            <li>JavaScript / TypeScript</li>
+                            <li>Python</li>
+                            <li>Solidity</li>
+                            <li>Node.js</li>
+                            <li>HTML5 / CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frontend Technologies</h4>
+                        <ul>
+                            <li>React.js / Next.js</li>
+                            <li>Vue.js / Angular</li>
+                            <li>Tailwind CSS</li>
+                            <li>Responsive Design</li>
+                            <li>Progressive Web Apps</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend & Database</h4>
+                        <ul>
+                            <li>Node.js / Express</li>
+                            <li>RESTful APIs</li>
+                            <li>GraphQL</li>
+                            <li>MongoDB / PostgreSQL</li>
+                            <li>Redis / Caching</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Blockchain & Web3</h4>
+                        <ul>
+                            <li>Smart Contract Development</li>
+                            <li>Web3.js / Ethers.js</li>
+                            <li>Hardhat / Truffle</li>
+                            <li>Multi-Chain Development</li>
+                            <li>DApp Architecture</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>DevOps & Tools</h4>
+                        <ul>
+                            <li>Git / GitHub</li>
+                            <li>Docker / CI/CD</li>
+                            <li>AWS / Vercel</li>
+                            <li>Agile / Scrum</li>
+                            <li>Jest / Testing Frameworks</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Software Development</h4>
+                        <ul>
+                            <li>SDLC Management</li>
+                            <li>System Architecture</li>
+                            <li>Code Review & QA</li>
+                            <li>Technical Documentation</li>
+                            <li>Team Leadership</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education & Certifications -->
+            <div class="section">
+                <h3 class="section-title">Education & Certifications</h3>
+
+                <div class="education-item">
+                    <div class="education-title">Bachelor's Degree in Mechanical Engineering</div>
+                    <div class="education-detail">University Education</div>
+                    <div class="education-date">Graduated 2016</div>
+                </div>
+
+                <div style="margin-top: 25px;">
+                    <h4 style="color: #667eea; margin-bottom: 15px; font-size: 1.1em;">Professional Certifications</h4>
+                    
+                    <div class="certification">
+                        <div class="certification-title">ALX Software Engineering Program</div>
+                        <div class="certification-org">African Leadership Group (ALX)</div>
+                    </div>
+
+                    <div class="certification">
+                        <div class="certification-title">Full Stack Web Development Certifications</div>
+                        <div class="certification-org">freeCodeCamp</div>
+                    </div>
+
+                    <div class="certification">
+                        <div class="certification-title">Additional Professional Development Courses</div>
+                        <div class="certification-org">View complete certification portfolio on <a href="https://www.linkedin.com/in/ibrahim193/" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600;">LinkedIn</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Development -->
+            <div class="section">
+                <h3 class="section-title">Professional Development & Community Engagement</h3>
+                <ul style="margin-left: 20px;">
+                    <li style="margin-bottom: 10px; color: #555;">Active contributor to open-source projects and blockchain community initiatives</li>
+                    <li style="margin-bottom: 10px; color: #555;">Regular participant in technical hackathons and coding competitions with proven track record of success</li>
+                    <li style="margin-bottom: 10px; color: #555;">Committed to continuous learning and staying current with emerging technologies and industry best practices</li>
+                    <li style="margin-bottom: 10px; color: #555;">Experienced in mentoring junior developers and conducting technical training sessions</li>
+                    <li style="margin-bottom: 10px; color: #555;">Strong understanding of software development lifecycle, from requirements analysis to deployment and maintenance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -26,7 +26,7 @@ A gamified learning platform making Web3 education accessible and rewarding for 
 
 ### **Developer – Festify**  
 A decentralized greetings platform bringing festivals and celebrations on-chain.  
-🌐 [Live Demo](https://festify.vercel.app) • 🧾 [Repo](https://github.com/aliveevie/festify_celo)
+🌐 [Live Demo](https://festify.club) • 🧾 [Repo](https://github.com/aliveevie/festify_celo)
 
 - Designed and built a user-friendly interface for sending and receiving greetings stored immutably on the blockchain.
 - Integrated smart contracts on **Celo** to ensure decentralized functionality.
